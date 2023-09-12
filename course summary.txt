@@ -1,0 +1,6 @@
+                                    Knowledge                           Skill
+
+Algorithms                          def, refinement, pseudocode         recognize algorithms
+
+Data,Variables/Expressions, I/O
+
