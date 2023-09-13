@@ -1,16 +1,29 @@
 # atomic data : int, float, boolean (True or False)
+print(type(True))
 # compound data :
+print(type("hello students"))
+
 # string,
+print("  ")
+print(' quotation' )
+print('"word"')
+print(""" this is a triple quotation""")
+print('-' * 20)
+print('')
+print('-' * 20)
+
+message = "a;sldfkj"
+
+print(message)
 
 # list
+lis = [1, 2, 'apple']
 
 # tuple
+t = ( 1, 2 )
 
-# dictionary, and many more
-
-
-
-
+# dictionary, and many more(array, pandas dataframe)
+password = {"name": "123456"}
 
 # operators
 # arithmetic
