@@ -12,7 +12,7 @@ print('-' * 20)
 print('')
 print('-' * 20)
 
-message = "a;sldfkj"
+message = "how are you doing?"
 
 print(message)
 
