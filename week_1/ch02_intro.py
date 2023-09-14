@@ -38,7 +38,7 @@ password = {"pass": "123456"}
 # in, not in
 
 
-
+# mention #comment
 # things I want to mention on Tue: re-assign variable (Ex4), I/O
 
 # show I/O in pycharm editor and console using Ex2
