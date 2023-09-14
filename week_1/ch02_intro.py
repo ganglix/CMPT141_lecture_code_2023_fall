@@ -23,7 +23,7 @@ lis = [1, 2, 'apple']
 t = ( 1, 2 )
 
 # dictionary, and many more(array, pandas dataframe)
-password = {"name": "123456"}
+password = {"pass": "123456"}
 
 # operators
 # arithmetic
