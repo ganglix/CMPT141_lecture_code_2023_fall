@@ -3,10 +3,25 @@
 # convert the input to the desired data type.
 
 # example 1
-
+# user_input = input("please tell me your sad story:")
+# print("Now, I will make it more positive to cheer you up...")
+# print("|" + user_input + "|")
 
 # example 2
 # addition
+
+# ask user to input 2 numbers
+num1 = float(input("please type a number:"))
+num2 = float(input("please type another number"))
+# do the addition
+ans = num1 + num2
+# show the result
+print("the answer is", ans)
+print(f"the answer is {ans}")
+
+
+
+
 
 
 

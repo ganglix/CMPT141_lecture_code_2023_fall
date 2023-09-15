@@ -2,5 +2,6 @@
 
 Algorithms                          def, refinement, pseudocode         recognize algorithms
 
-Data,Variables/Expressions, I/O
+Data,Variables/Expressions          data types, literal, variable,      simple codetrace
+                                    operators
 
