@@ -2,6 +2,7 @@
 
 Algorithms                          def, refinement, pseudocode         recognize algorithms
 
-Data,Variables/Expressions          data types, literal, variable,      simple codetrace
+Data,Variables/Expressions          data types, literal, variable,      simple flowtrace
                                     operators
 
+Functions                           built-in, arguments, return         use function, flowtrace function
