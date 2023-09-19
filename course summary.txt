@@ -6,3 +6,8 @@ Data,Variables/Expressions          data types, literal, variable,      simple f
                                     operators
 
 Functions                           built-in, arguments, return         use function, flowtrace function
+
+Creating Functions                  def, parameter, docstring           define a function
+                                    scope (local vs global)             read and write docstring
+                                    return                              generalize
+                                                                        flowtrace
