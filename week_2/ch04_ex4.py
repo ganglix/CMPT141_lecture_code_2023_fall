@@ -16,6 +16,13 @@ print(status)
 
 
 
+
+
+
+
+
+
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(reminder: scope, return, dangerous thing to do, inplace)
 
 
@@ -34,7 +41,7 @@ print(status)
 # pikachu.set_status("poisoned")
 # print("after poisoned:", pikachu.status)
 
-
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 # spaceship game
