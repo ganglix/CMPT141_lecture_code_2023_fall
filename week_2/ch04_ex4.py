@@ -33,3 +33,9 @@ print(status)
 #
 # pikachu.set_status("poisoned")
 # print("after poisoned:", pikachu.status)
+
+
+
+
+# spaceship game
+# http://www.codeskulptor.org/#user43_7zb1ohzfMl_35.py
