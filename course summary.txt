@@ -12,3 +12,5 @@ Creating Functions                  def, parameter, docstring           define a
                                     return                              generalize
                                                                         flowtrace
 
+Objects                             object, method                      use a method
+
