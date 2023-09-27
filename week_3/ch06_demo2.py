@@ -4,35 +4,35 @@
 import turtle
 import random
 
+turtle.shape("turtle")
 
 # turtle.speed(1)
-# # turtle.color(0, 0, 1)
-# turtle.forward(100) # 50 pixel
+# turtle.color(1, 0, 1)  # Red Green Blue
+# turtle.forward(100) # 100 pixel
 # turtle.left(120)
 # turtle.forward(100)
 # turtle.left(120)
 # turtle.forward(100)
 # turtle.done()
 
-# turtle.shape()
 
-# def drawCircle(x, y):
-#     # Draw a circle there , and fill it with a random color .
-#     turtle.fillcolor(random.random(), random.random(), random.random())
-#     turtle.goto(x, y)
-#     turtle.down()
-#     turtle.begin_fill()
-#     turtle.circle(30)
-#     turtle.end_fill()
-#     # turtle.up()
+def drawCircle(x, y):
+    # Draw a circle there , and fill it with a random color .
+    turtle.fillcolor(random.random(), random.random(), random.random())  #RGB
+    turtle.goto(x, y)
+    turtle.down()
+    turtle.begin_fill()
+    turtle.circle(30)
+    turtle.end_fill()
+    turtle.up()
 #
-# turtle.title ("Click on the canvas !")
+turtle.title ("Click on the canvas !")
 #
-# # bind left mouse button to drawCircle function
-# turtle.onscreenclick(drawCircle)
-#
-# # Initiate main loop
-# turtle.mainloop()
+# bind left mouse button to drawCircle function
+turtle.onscreenclick(drawCircle)
+
+# Initiate main loop
+turtle.mainloop()
 
 
 
