@@ -1,7 +1,5 @@
 # control flow - branching
 
-
-
 # Relational and Boolean operator, data type
 
 
@@ -14,6 +12,10 @@
 # logical(boolean) operator
 
 
-
 # order of precedence
 # not > and > or
+
+
+
+
+
