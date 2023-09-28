@@ -29,7 +29,7 @@ print(s[-len(s)])
 s = "CMPT 141"
 
 print(s[0: 3])  # T at index 3 is not included
-# s[ start_index, end_index(exclusive)]
+# s[ start_index, stop_index(exclusive)]
 print(s[0: 3+1])
 
 
