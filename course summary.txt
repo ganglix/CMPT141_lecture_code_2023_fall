@@ -14,3 +14,12 @@ Creating Functions                  def, parameter, docstring           define a
 
 Objects                             object, method                      use a method
 
+Modules                             def                                 import a module,
+                                    Useful modules                      alias
+                                                                        import a function from a module
+                                                                        from ... import ... as ...
+
+Indexing and Slicing                rules                               indexing (+/-)
+                                    string                              slicing
+                                    list                                start: stop(exclusive): step
+                                    tuple                               +/- step  [: : -1]
