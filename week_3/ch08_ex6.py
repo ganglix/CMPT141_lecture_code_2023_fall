@@ -7,28 +7,49 @@
 # • "D" if grade is between 64 and 50
 # • "F" otherwise
 
-# def letter_grade(grade):
-#     """
-#     Print the letter grade of a number grade
-#     :param grade: int, numeric grade
-#     :return: None
-#     """
-#     if grade <= 100 and grade >= 95:
-#         print("A+")
-#     elif grade <= 94 and grade >= 85:
-#     # if grade <= 94 and grade >= 85:
-#         print("A")
-#     elif grade <= 84 and grade >= 75:
-#         print("B")
-#     elif grade <= 74 and grade >= 65:
-#         print("C")
-#     elif grade <= 64 and grade >= 50:
-#         print("D")
-#     else:
-#         print("F")
+def letter_grade(grade):
+    """
+    Print the letter grade of a number grade
+    :param grade: int, numeric grade
+    :return: None
+    """
+    import math as m
+    grade = m.ceil(grade)
+    if grade <= 100 and grade >= 95:
+        print("A+")
+    elif grade <= 94 and grade >= 85:
+    # if grade <= 94 and grade >= 85:
+        print("A")
+    elif grade <= 84 and grade >= 75:
+        print("B")
+    elif grade <= 74 and grade >= 65:
+        print("C")
+    elif grade <= 64 and grade >= 50:
+        print("D")
+    else:
+        print("F")
 
-
+letter_grade(94.5)
 # mention if-if else-if if-else,
+
+# if condition:
+#     # do something
+# else:
+#     if another_condition:
+#         # do another thing
+#     else:
+#         # do something else
+
+#
+
+# if condition:
+#     # do something
+# elif another_condition:
+#     # do another thing
+# else:
+#     # do something else
+
+
 
 # discussion: room to improve?
 
