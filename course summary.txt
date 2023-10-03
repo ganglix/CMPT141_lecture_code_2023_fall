@@ -23,3 +23,11 @@ Indexing and Slicing                rules                               indexing
                                     string                              slicing
                                     list                                start: stop(exclusive): step
                                     tuple                               +/- step  [: : -1]
+
+Branching                          relational operator                  flowtrace branching
+                                   boolean operator                     write logic-sound branches
+                                   order of precedence [N A O]
+                                   if - else
+                                   if - elif - else
+                                   if - if - if
+
