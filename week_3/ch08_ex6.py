@@ -30,7 +30,7 @@ def letter_grade(grade):
         print("F")
 
 letter_grade(94.5)
-# mention if-if else-if if-else,
+# mention if-if elif if-else,
 
 # if condition:
 #     # do something
