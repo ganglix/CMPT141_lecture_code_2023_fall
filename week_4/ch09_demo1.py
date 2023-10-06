@@ -11,6 +11,20 @@ a2 b2 c2 d2 e2 f2 g2 h2
 a1 b1 c1 d1 e1 f1 g1 h1
 """
 
+# task 1 print the first row
+# a8 b8 c8 d8 e8 f8 g8 h8
+
+# # first row
+# row = 8
+# for col in "abcdefgh":
+#     print(col + str(row), end=' ')  # by default print() prints a newline "\n"
+# print() # newline
+
+# all rows
+for row in range(8, 0, -1):
+    for col in "abcdefgh":
+        print(col + str(row), end=' ')  # by default print() prints a newline "\n"
+    print()  # newline
 
 
 

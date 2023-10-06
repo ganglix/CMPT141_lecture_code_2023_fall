@@ -9,3 +9,14 @@
 """
 M = 10
 N = 5
+
+# first row
+y = 0
+for x in range(M):
+    print(f"({x},{y})", end=' ')
+
+# all rows
+for y in range(N):
+    for x in range(M):
+        print(f"({x},{y})", end=' ')
+    print() # newline

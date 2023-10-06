@@ -19,15 +19,22 @@
 #     x = x + 2
 
 # (d)
-# divisor = 2
-# dividend = 49
-# while dividend % divisor != 0:
-#     divisor = divisor + 1
+divisor = 2
+dividend = 6793
+while dividend % divisor != 0:
+    divisor = divisor + 1
+if divisor == dividend:
+    print(f"{dividend} is a prime number")
+else:
+    print(f"{dividend} is NOT a prime number")
+    print(f"it can be divided by {divisor}")
 
-# (e)
+# # (e)
 # low = -100
 # high = 100
 # msg = " Enter int between " + str(low) + " to " + str(high) + ":"
 # num = int(input(msg))
-# while num >= low or num <= high:
+# while num >= low or num <= high: # change or to and
 #     num = int(input(msg))
+# # when while loop is done
+# print(f"number {num} is out of range")

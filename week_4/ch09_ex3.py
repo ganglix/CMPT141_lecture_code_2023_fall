@@ -21,22 +21,3 @@ def count_vowels(s):
     print("a:"+str(count_a), "e:"+str(count_e))
 
 count_vowels("piece")
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # flowtrace nested for-loop
-# total = 0
-# for i in range(2):  # 0, 1
-#     for j in range(2): # 0, 1
-#         total = total + 1
-# print(total)

@@ -82,3 +82,22 @@ for i in range(2):
     for j in range(2):
         total = total + 1
 print(total)
+
+""" write down the code that the computer would execute in sequence:
+total = 0
+for i in range(2):
+i = 0
+for j in range(2):
+j = 0
+total = 0 + 1
+j = 1
+total = 1 + 1
+i = 1    
+for j in range(2):
+j = 0
+total = 2 + 1
+j = 1
+total = 3 + 1
+print(4)
+
+"""
