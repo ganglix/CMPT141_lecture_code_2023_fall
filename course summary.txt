@@ -31,3 +31,5 @@ Branching                          relational operator                  flowtrac
                                    if - elif - else
                                    if - if - if
 
+Repetition(loops)                  while, for                           flowtrace
+                                   common application                   write loops
