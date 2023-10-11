@@ -12,3 +12,15 @@ flu_case = [13, 14, 9, 16, 10, 18, 22, 19, 16, 22,
              111, 128, 120, 133, 134, 139, 127, 130, 141, 147,
              439, 236, 218, 209, 213, 244, 329, 197, 351, 325]
 
+days = range(1, len(flu_case)+1) # day 1, 2 ...
+
+import matplotlib.pyplot as plt
+
+# plt.scatter(days, flu_case)
+
+plt.plot(days, flu_case, linestyle='--', marker= 'o', color='k')
+plt.xlabel('days')
+plt.ylabel("flu case")
+plt.grid()
+plt.title("daily report of flue cases")
+plt.show()
