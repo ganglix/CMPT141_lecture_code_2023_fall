@@ -1,7 +1,7 @@
-L = [1, 2, 3, 4, 5, 6]
-for value in L:
-    L.remove(value)
-print(L)
+# L = [1, 2, 3, 4, 5, 6]
+# for value in L:
+#     L.remove(value)
+# print(L)
 
 """
 L = [1, 2, 3, 4, 5, 6]
@@ -35,3 +35,39 @@ for value in [1, 2, 3, 4, 5, 6]:
 # for char in "abc":
 #     L[0].append(char)
 # print(L)
+
+
+"""
+L = []
+for i in range(3):
+    i = 0
+    [].append([])
+    i = 1
+    [[] ].append([])  
+    i = 2
+    [[],[]].append([])
+     
+for char in "abc":
+    char = "a"
+    [[],[],[]][0].append("a")
+    char = "b"
+    [["a"],[],[]][0].append("b")
+    char = "c"
+    [["a","b"],[],[]][0].append("c")
+
+print([["a","b","c"],[],[]])
+
+"""
+# print a b c placed separately in these sublists
+L = []
+for i in range(3):
+    L.append([])
+
+char = "abc"
+# for idx in range(len(char)): # 0 1 2
+#     L[idx].append(char[idx])
+# print(L)
+
+for c, sublist in zip(char, L):
+    sublist.append(c)
+print(L)
