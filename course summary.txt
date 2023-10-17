@@ -33,3 +33,9 @@ Branching                          relational operator                  flowtrac
 
 Repetition(loops)                  while, for                           flowtrace
                                    common application                   write loops
+
+list                               common functions and methods         modify a list (pitfall never iterate over a size-changing list)
+                                   mutable datatype                     flowtrace
+                                   list of lists                        indexing and slicing
+                                   list comprehension                   write list comprehension
+
