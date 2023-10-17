@@ -17,8 +17,9 @@ days = range(1, len(flu_case)+1) # day 1, 2 ...
 import matplotlib.pyplot as plt
 
 # plt.scatter(days, flu_case)
+plt.plot(days, flu_case, "r--o")
 
-plt.plot(days, flu_case, linestyle='--', marker= 'o', color='k')
+# plt.plot(days, flu_case, linestyle='--', marker='o', color='k')
 plt.xlabel('days')
 plt.ylabel("flu case")
 plt.grid()

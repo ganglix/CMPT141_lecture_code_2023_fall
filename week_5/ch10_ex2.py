@@ -18,3 +18,36 @@ index   0   1   2   3   4   5   6   7   ... len(flu_case)-1
 day     1   2   3   4   5   6   7   8   ... len(flu_case)
 """
 
+days = list(range(1, len(flu_case)+1))
+days_starting_7 = days[7:]
+window_size = 7
+
+# # average day 1-7  and report for day 7
+# day = 7
+# average_7d = sum(flu_case[day-window_size:day])/ window_size
+#
+# # average day 2-8 for day 8, by moving forward by 1 day
+# day = 8
+# average_7d = sum(flu_case[day-window_size: day])/ window_size
+
+
+# average for all days from day 7 onwards
+flu_case_7d_average = []
+for day in days_starting_7:
+    average_7d = sum(flu_case[day-window_size:day])/ window_size
+    flu_case_7d_average.append(average_7d)
+
+# plot
+import matplotlib.pyplot as plt
+plt.plot(days, flu_case, marker="o", linestyle="", label = "daily")
+plt.plot(days_starting_7, flu_case_7d_average, label = "7d average")
+plt.legend()
+plt.xlabel('day')
+plt.ylabel('flu case')
+plt.xticks(days[::3])
+plt.show()
+
+
+
+
+

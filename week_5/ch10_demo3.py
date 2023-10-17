@@ -4,9 +4,17 @@
 # Let us observe the effect on an input variable before,
 # during, and after a function call that changes the value.
 
+# def update_grades(grades):
+#     grades[0] = grades[0] + 2
+#
+# classgrades = [48, 53, 95, 72]
+#
+# new_grades = update_grades(classgrades)
 
 def update_grades(grades):
+    grades = grades.copy()
     grades[0] = grades[0] + 2
+    return grades
 
 classgrades = [48, 53, 95, 72]
 

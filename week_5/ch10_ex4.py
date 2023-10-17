@@ -17,3 +17,9 @@ library = [["Pokemon!", 5, "Metal"],
 
 # -----------------------------------------
 # the brackets work across multiple lines, so the one-liner list comprehension can be written in many lines
+best_playlist = [song for song in library
+                 if (song[1] == 4 or song[1] == 5) and
+                 (song[2] == "Metal" or song[2] == "Hard Rock") # NAO  not and or,
+                 # () is necessary!
+                 ]
+print(best_playlist)
