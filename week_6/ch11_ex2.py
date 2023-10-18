@@ -14,5 +14,24 @@ availability = {"Neo": ["Monday"],
                 "Smith": ["Monday", "Tuesday"]}
 
 
+def reverse_dict(avail_dict):
+    week_schedule = {}   # day : [names]
+    for name in avail_dict:
+        day_list = avail_dict[name]
+        for day in day_list:
+            if day not in week_schedule:
+                week_schedule[day] = []   # initialize a []
+            week_schedule[day].append(name)
 
+    return week_schedule
 
+schedule = reverse_dict(availability) # day: [names]
+most_number_of_friends = 0
+most_avail_day = ""
+
+for day in schedule:
+    if len(schedule[day]) > most_number_of_friends:
+        most_number_of_friends = len(schedule[day])
+        most_avail_day = day
+
+print(f"{most_number_of_friends} are available on {most_avail_day}")
