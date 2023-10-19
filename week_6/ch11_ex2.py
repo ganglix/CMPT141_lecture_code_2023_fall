@@ -35,4 +35,3 @@ for day in schedule:
         most_avail_day = day
 
 print(f"{most_number_of_friends} are available on {most_avail_day}")
-
