@@ -21,13 +21,28 @@ books = [
 ]
 
 # open for writing
-
+path = "my_books.txt"
+f = open(path, "w")  # write mode, creates a file
 # for each book , write its title , author , year published in that order
-
+for book in books:
+    # book is a dict
+    line_to_write = book['title'] + ',' + book["author"] + "," + str(book["year_published"])
+    f.write(line_to_write)
+    f.write('\n')  # write a newline
 # done writing , close file
+f.close()
 
 
-
+# use with statement
+# open for writing
+path = "my_books.txt"
+with open(path, "w") as f: # write mode, creates a file
+    # for each book , write its title , author , year published in that order
+    for book in books:
+        # book is a dict
+        line_to_write = book['title'] + ',' + book["author"] + "," + str(book["year_published"])
+        f.write(line_to_write)
+        f.write('\n')  # write a newline
 
 
 

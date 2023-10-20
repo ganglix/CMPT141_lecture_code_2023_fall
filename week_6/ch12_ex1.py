@@ -11,13 +11,24 @@
 # ~~~~~~~~~~~~open~~~~~~~read~~~~~~close~~~~routine~~~~~~~~
 
 # open file for reading
+path = "./subfolder/scientists_data.txt"
 
+f = open(path, "r")
+scientists = []
 # read in all scientist data and put in a list of records
-# create scientist record
+for line in f:
+    line = line.rstrip().split(",")
+    # create scientist record
+    record = {}
+    record["name"] = line[0]
+    record["birth_year"] = line[1]
+    record["death_year"] = line[2]
+    scientists.append(record)
 
+print(scientists)
 
 # done reading , close file
-
+f.close()
 
 
 

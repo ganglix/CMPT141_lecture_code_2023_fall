@@ -35,3 +35,11 @@ for day in schedule:
         most_avail_day = day
 
 print(f"{most_number_of_friends} are available on {most_avail_day}")
+
+# find who is not attending on the day that most people are available
+print(schedule)
+
+attend = schedule[most_avail_day]  # list of ppl attending
+
+absent = [name for name in availability if name not in attend]
+print('who is not attend?', absent)

@@ -19,11 +19,23 @@ inventory = [
 ]
 
 # open file for writing
-
+path = "store_inventory.txt"
+f = open(path, "w")
 # for every item in inventory , write out its details on its own line
-
+for item in inventory:
+    detail = ",".join( [
+        item["name"],
+        item["desc"],
+        str(item["cost"]),
+        str(item["weight"])
+    ] )
+    detail += ","
+    if "stock" in item:
+        detail += str(item["stock"])
+    f.write(detail)
+    f.write('\n')
 # done writing , so close the file
-
+f.close()
 
 
 
