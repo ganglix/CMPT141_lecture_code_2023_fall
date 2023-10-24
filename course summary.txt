@@ -39,3 +39,7 @@ list                               common functions and methods         modify a
                                    list of lists                        indexing and slicing
                                    list comprehension                   write list comprehension
 
+dictionary                         key, value, mutable                  flowtrace
+                                   store information                    modify a dictionary ( never interate over a size-changing dict)
+                                   map data                             create a dictionary to store data
+                                   database
