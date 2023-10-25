@@ -19,10 +19,45 @@ def is_valid_password(password):
 
 
 # Testing - white box
-# white box reasoning
+# white box reasoning: make sure every singe line of code get tested!
 
+# for inputs, check the code, use white box reasoning
+# for expected output, give "correct" answer as you learned from the docstring
 
+"""
+inputs:""
+outputs_expected: False
+reason: trigger line 11 if statement, condition is true
 
+inputs:"1"* 19
+outputs_expected: False
+reason: trigger line 11 if statement, condition is true
+
+inputs:"1"* 10
+outputs_expected: True
+reason: trigger line 11 if statement, condition is false
+
+"""
+
+"""
+inputs:"_"
+outputs_expected: False
+reason: trigger line 11 if statement, trigger line 13 if statement, condition is True
+
+inputs:"a"*10 + "_"
+outputs_expected: False
+reason: Only trigger line 13 if statement, condition is True
+"""
+
+"""
+inputs:"-"
+outputs_expected: False
+reason: trigger line 15 if statement, trigger line 13 if statement, condition is True
+
+inputs:"a"*10 + "-"
+outputs_expected: False
+reason: Only trigger line 15 if statement, condition is True
+"""
 
 
 

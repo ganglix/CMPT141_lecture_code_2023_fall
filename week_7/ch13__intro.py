@@ -11,8 +11,9 @@
 
 
 # pick a test case
-# 1
-# 2
+# 1 most likely to cause an error/ fault
+# 2 small - unit test
+
 
 
 # test case example
