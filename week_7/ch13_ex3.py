@@ -87,3 +87,17 @@ reason: Only trigger line 15 if statement, condition is True
 #         print()
 #     else:
 #         print("all tests passed!")
+
+
+def is_divisible_by_7 (numbers):
+    """
+    This function returns true if the list numbers
+    contains a number that is divisible by 7,
+    and returns false otherwise .
+    numbers : list of numbers to check
+    return : if list contains a number divisible by 7
+    """
+    for i in numbers:
+        if i % 7 == 0:
+            return True
+    return False
