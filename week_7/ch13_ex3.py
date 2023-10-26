@@ -61,26 +61,7 @@ reason: Only trigger line 15 if statement, condition is True
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# # an fancy way to organize your test cases using list of dictionaries (revisit this after we cover list and dict)
+# # an fancy way to organize your test cases using list of dictionaries
 # test_suite =[
 #     {"input": "a"*8,
 #     "output": False,
