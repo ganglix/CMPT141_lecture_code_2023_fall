@@ -30,9 +30,21 @@ def cost_phone_call(call_duration):
 
 
 # test case
-inputs = 11.15
-expected_outputs = 5.04
+# inputs = 11.15
+# expected_outputs = 5.04
+#
+# bill = cost_phone_call(inputs)
+# if bill != expected_outputs:
+#     print(f"Fault found!, input: {inputs}, expected: {expected_outputs}, got: {bill}")
 
-bill = cost_phone_call(inputs)
-if bill != expected_outputs:
-    print(f"Fault found!, input: {inputs}, expected: {expected_outputs}, got: {bill}")
+
+s = "asdfkjleropd"
+count = {}
+for c in s:
+    if c.lower() in "aeiou":
+        # counting part
+        if c not in count:
+            count[c] = 0
+    count[c] += 1
+
+print(count)

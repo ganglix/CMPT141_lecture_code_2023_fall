@@ -80,7 +80,7 @@ reason: Only trigger line 15 if statement, condition is True
 # ]
 # for test_case in test_suite:
 #     res = is_valid_password( test_case["input"] )
-#     if res == test_case["output"]:
+#     if res != test_case["output"]:
 #         print("fault found!", test_case['reason'])
 #         print("    expected: ", test_case["output"])
 #         print("    returned: ", res)
@@ -101,3 +101,17 @@ def is_divisible_by_7 (numbers):
         if i % 7 == 0:
             return True
     return False
+
+"""
+inputs: [] (pick this input after you inspect the code)
+outputs_expected: False (get this use your brain after you know the functionality of the function by reading the docstring
+reason: run the for loop 0 times
+
+inputs: [1]
+reason: run the for loop 1 time
+
+inputs: [1,2,3,4,7] (look at the code)
+outputs_expected: True (dont look at the code)
+reason: run max times (len(number)) of the loop 
+"""
+
