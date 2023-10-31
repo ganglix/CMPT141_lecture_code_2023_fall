@@ -43,3 +43,11 @@ dictionary                         key, value, mutable                  flowtrac
                                    store information                    modify a dictionary ( never interate over a size-changing dict)
                                    map data                             create a dictionary to store data
                                    database
+
+Files                              format, txt, csv                     write code to read from a file and store data in a dict
+                                   open write, code template            write code to write strings to file
+                                   '\n'                                 dont forget to close
+                                   file directory, absolute/relative
+
+Testing and Debugging              purpose, blackbox, whitebox          blackbox whitebox reasoning
+                                   test driver                          write test driver
