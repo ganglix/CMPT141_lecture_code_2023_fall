@@ -13,22 +13,32 @@ turbines = [ [2.5, 2.2, 2.3, 2.5, 2.6],
              [2.2, 2.3, 2.4, 2.5, 2.5] ]
 
 # Part (a) Change the list into a 2D array
-
-
+a = np.array(turbines)
+print(a)
 # Part (b) Print the dimensions of the wind farm
-
+print(a.ndim)
 
 # Part (c) Print the power output of the first turbine in the fifth row
-
+print(a[4,0])
 
 # Part (d) Print the average power produced by
 # the first three turbines in the first row
-
+print(a[0, 0:3].mean())  # row, col_slice
 
 # Part (e) Print each turbine’s power output, one per line
 
+# use index
+# n_row, n_col = a.shape # a.shape (row size,col size)
+#
+# for i in range(n_row):
+#     for j in range(n_col):
+#         print(a[i,j])
 
+# for row in a:
+#     for item in row:
+#         print(item)
 
-
+for item in a.reshape(a.size):
+    print(item)
 
 # things I want to mention for-loop iterator ( use index, use row, use item after reshape)
