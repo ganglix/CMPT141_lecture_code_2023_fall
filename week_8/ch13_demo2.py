@@ -42,7 +42,7 @@ image = skdata.camera()
 #------------explore skills-----------
 # things I want to mention
 
-# histgram plot one-liner
+# histogram plot one-liner
 
 
 
