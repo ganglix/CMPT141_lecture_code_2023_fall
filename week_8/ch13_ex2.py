@@ -38,7 +38,10 @@ print(a[0, 0:3].mean())  # row, col_slice
 #     for item in row:
 #         print(item)
 
-for item in a.reshape(a.size):
+# for item in a.reshape(a.size):
+#     print(item)
+
+for item in a.flatten():   # .flatten() will reduce 2D to 1D
     print(item)
 
 # things I want to mention for-loop iterator ( use index, use row, use item after reshape)
