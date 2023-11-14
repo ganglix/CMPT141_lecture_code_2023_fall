@@ -1,9 +1,10 @@
 # recursion
+# "the family chain of new phones"
 
-# find the solution of a problem
-# solution is simply related to the solution of a reduced form of the problem
 
-# how a problem can be reduced: reduce its size, step, number
+
+
+
 
 
 
