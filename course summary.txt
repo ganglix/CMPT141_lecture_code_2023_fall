@@ -51,3 +51,10 @@ Files                              format, txt, csv                     write co
 
 Testing and Debugging              purpose, blackbox, whitebox          blackbox whitebox reasoning
                                    test driver                          write test driver
+
+array                              element-wise arithmetic operation    use indexing and slicing
+                                   common attributes and methods        use logical indexing
+                                   .size  .shape  .max()   .mean()      loop with array using item or index
+                                   1-D 2-D
+                                   logical indexing (masking)
+                                   arr[arr>0]
