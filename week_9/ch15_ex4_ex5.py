@@ -19,5 +19,16 @@ def print_ascending(N):
         print_ascending(N-1)
         print(N)
 
-# print_ascending(2)
+print_ascending(2)
 
+"""
+print_ascending(2)
+    N = 2
+    print_ascending(1)
+        N = 1
+        print_ascending(0)
+            N = 0
+            print(0)
+        print(1)
+    print(2)
+"""
