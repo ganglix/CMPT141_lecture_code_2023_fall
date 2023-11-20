@@ -58,3 +58,10 @@ array                              element-wise arithmetic operation    use inde
                                    1-D 2-D
                                    logical indexing (masking)
                                    arr[arr>0]
+
+recursion                          base case                           write recursive function
+                                   recursive case                      recognize base, recursive case
+                                   delegation                          base, recursive case, relationship between
+                                                                       problem and reduced problem
+                                                                       f(base) f(base + a bit more) f( base + even a bit more)
+                                                                       find how are they related to each other
