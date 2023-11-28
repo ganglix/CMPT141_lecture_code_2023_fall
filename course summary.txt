@@ -65,3 +65,12 @@ recursion                          base case                           write rec
                                                                        problem and reduced problem
                                                                        f(base) f(base + a bit more) f( base + even a bit more)
                                                                        find how are they related to each other
+
+Searching                          membership, retrieval (look-up)      apply the algorithm with pencil and paper
+                                   linear, binary(must be sorted)                           with code
+
+
+Sorting                            insertion sort,
+                                   merge sort                           draw recursion tree (diagram) divide and conquer
+                                   quick sort                           code up in recursive functions
+                                   sort algorithm efficiency
