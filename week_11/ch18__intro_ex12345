@@ -2,21 +2,6 @@ There are 10 types of people in this world, those who
 understand binary and those who don't.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 numeral: 10 symbol invented by human, depends on language and rule
 number:  pure abstract fact of quantity
 
@@ -32,32 +17,50 @@ quantity   numeral(decimal, arabic number)    numeral(binary, arabic number)    
 Decimal
 base: 10  (0~9)
 place: 1000s   100s    10s   1s
+        10^3   10^2    10^1   10^0
 
 
-
-Binary
-base:
+Binary:
+base: 2 (0, 1)
 place: 8s     4s     2s    1s
-
+       2^3    2^2    2^1    2^0
 
 
 
 Ex 1
 Binary to Decimal
-0b1001
+0b1001      # 0b is a prefix telling you that this is a binary number
 
-
-
-
+Binary:
+base: 2 (0, 1)
+place: 8s     4s     2s    1s
+       2^3    2^2    2^1    2^0
+        1      0      0     1
+-------------------------------
+        8  +   0  +   0  +  1   = 9
 
 
 Ex 2
 Decimal to Binary
 19
 
+    x           r
+    19          19 % 2 = 1
+    19//2 = 9   9 % 2 = 1
+    9//2 = 4    4 % 2 = 0
+    4//2 = 2    2 % 2 = 0
+    2//2 = 1    1 % 2 = 1
+    1//2 = 0
 
+b: 10011
 
+Check:
 
+place: 16     8s     4s     2s    1s
+       2^4    2^3    2^2    2^1    2^0
+       1      0      0      1      1
+------------------------------------------
+       16  +  0  +   0  +   2  +   1      = 19
 
 
 Ex 3
@@ -65,8 +68,9 @@ Binary addition
 
             1   0   1   1   0
         +           1   0   1
+     carry      1
         ------------------------
-
+            1   1   0   1   1
 
 
 
@@ -78,33 +82,51 @@ Binary multiplication
                                     1    0    1    1    0
                                 x   1    0    1    1    1
                                 -------------------------
-
-
-
-
+                                    1    0    1    1    0
+                               1    0    1    1    0
+                          1    0    1    1    0
+                     0    0    0    0    0
+                1    0    1    1    0
+       carry         1    1    1    1    1
+-----------------------------------------------------------------
+                1    1    1    1    1    1    0    1    0
 
 
 
 Bonus ex
 Binary division
 
+                  1   1   0   0 . 1
             -------------------
     1   0   ) 1   1   0   0   1
-
-
-
+              1   0
+              ---------
+                  1   0
+                  1   0
+                  ---------
+                      0   0
+                      0   0
+                      ---------
+                          0   1
+                          0   0
+                          -----
+                              1   0
+                              1   0
+                              -----
+                                  0
 
 
 Ex 5 signed magnitude
 
-
-0b00001010
-
+# we will tell you if a binary is signed, so you know the left-most bit represents sign
+0b00001010  (+)   abs value 1010
+0b10001010  (-)   abs value 1010
 
 
 What about these two "signed" binary numbers:
-100000
-000000
+
+100000  (-0)
+000000  (+0)
 
 
 
