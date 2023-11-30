@@ -74,3 +74,13 @@ Sorting                            insertion sort,
                                    merge sort                           draw recursion tree (diagram) divide and conquer
                                    quick sort                           code up in recursive functions
                                    sort algorithm efficiency
+
+Binary Numbers                     0bxxxxxx                             conversion decimal <-> binary
+                                   signed magnitude representation      calculation + - * / practice
+                                   bit                                  int8(signed) _ _______ 127
+
+Architecture                       von Neumann Architecture
+                                   software/program as data (in binary)
+                                   control unit and arithmetic/logic unit (ALU)
+                                   fetch-decode-execute cycle
+                                   machine code
