@@ -2,7 +2,7 @@ import numpy as np
 import skimage.io as io
 import skimage.segmentation as seg
 import skimage.filters as filter
-import scipy.ndimage.morphology as morph
+from scipy.ndimage import binary_fill_holes
 import matplotlib.pyplot as plt
 
 # 1: Load and scale the image
@@ -35,10 +35,8 @@ for r in range(0, height):
 # below is simple, but throws an error: RuntimeWarning: invalid value encountered in true_divide
 # greenness = green / (red + green + blue)
 
-# below is working loopless solution
-# total = red + green + blue
-# greenness[green > 0] = green[green > 0] / total[green > 0]
-# greenness[green == 0] = 0
+#  working loopless solution ?
+
 
 # 4. Plot histogram of greenness
 # F = plt.figure()
@@ -49,45 +47,46 @@ for r in range(0, height):
 # print(edges[100])
 
 # 4. or use plt.hist to plot histogram
-F = plt.figure()
-plt.hist(greenness.flatten(), bins=256)
-plt.show()
+# F = plt.figure()
+# plt.hist(greenness.flatten(), bins=256)
+# plt.show()
 
 # 5. Obtain a good threshold of "greennness".
 # Pixels with greenness higher than T are probably part of a leaf.
 T = filter.threshold_otsu(greenness)
-# T= 0.4
+
 
 # 6: Segment the image using the greenness threshold.
-segmentation = np.zeros([height, width], dtype=bool)
+# segmentation = np.zeros([height, width], dtype=bool)
 
 # 6a: Loop-based solution
-for r in range(0, height):
-    for c in range(0, width):
-        if greenness[r, c] > T:
-            segmentation[r, c] = True
+# for r in range(0, height):
+#     for c in range(0, width):
+#         if greenness[r, c] > T:
+#             segmentation[r, c] = True
 
 # 6b: Loopless soloution
-segmentation = greenness > T
+# segmentation = greenness > T
 
 # fill holes using a library function
-segmentation = morph.binary_fill_holes(segmentation)
+# segmentation = binary_fill_holes(segmentation)
 
 # # 7: draw the segmentation on the original image
 # # find the boundary of leaf
-segmentation_boundaries = np.zeros_like(segmentation).astype(bool)
-for i in range(1, segmentation_boundaries.shape[0]-1):
-    for j in range(1, segmentation_boundaries.shape[1]-1):
-        if (segmentation[i, j] and  # leaf True, 8 neighbours are not all leaf
-                not (segmentation[i - 1, j]
-                     and segmentation[i + 1, j]
-                     and segmentation[i, j - 1]
-                     and segmentation[i, j - 1]
-                     and segmentation[i + 1, j + 1]
-                     and segmentation[i - 1, j - 1]
-                     and segmentation[i + 1, j - 1]
-                     and segmentation[i - 1, j + 1])):
-            segmentation_boundaries[i, j] = True
+# segmentation_boundaries = np.zeros_like(segmentation).astype(bool)
+# for i in range(1, segmentation_boundaries.shape[0]-1):
+#     for j in range(1, segmentation_boundaries.shape[1]-1):
+#         if (segmentation[i, j] and  # leaf True, 8 neighbours are not all leaf
+#                 not (segmentation[i - 1, j]
+#                      and segmentation[i + 1, j]
+#                      and segmentation[i, j - 1]
+#                      and segmentation[i, j - 1]
+#                      and segmentation[i + 1, j + 1]
+#                      and segmentation[i - 1, j - 1]
+#                      and segmentation[i + 1, j - 1]
+#                      and segmentation[i - 1, j + 1])):
+#             segmentation_boundaries[i, j] = True
+
 
 # # use the module function seg:
 # segmentation_boundaries = seg.find_boundaries(segmentation)
@@ -99,7 +98,8 @@ for i in range(1, segmentation_boundaries.shape[0]-1):
 # segfig = plt.figure()
 # io.imshow(result)
 
-# # 8: Measure how close the segmentation is to the right answer
+
+# 8: Measure how close the segmentation is to the right answer
 #
 # # load the ground truth
 # GT = io.imread('threshimage_0002.png').astype(bool)
@@ -111,6 +111,6 @@ for i in range(1, segmentation_boundaries.shape[0]-1):
 # area_intersect = np.sum(intersection)
 # DSC = 2 * area_intersect / (area_seg + area_gt)
 # print('The Dice similarity coefficient of the segmentation is: ', DSC)
-
-
-io.show()
+#
+#
+# io.show()
