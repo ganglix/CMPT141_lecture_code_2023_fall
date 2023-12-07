@@ -53,7 +53,7 @@ for r in range(0, height):
 
 # 5. Obtain a good threshold of "greennness".
 # Pixels with greenness higher than T are probably part of a leaf.
-T = filter.threshold_otsu(greenness)
+# T = filter.threshold_otsu(greenness)
 
 
 # 6: Segment the image using the greenness threshold.
@@ -97,6 +97,7 @@ T = filter.threshold_otsu(greenness)
 # result = np.dstack([red, green, blue])  # stack three channels together to form a new 3-D array
 # segfig = plt.figure()
 # io.imshow(result)
+# io.show()
 
 
 # 8: Measure how close the segmentation is to the right answer
@@ -113,4 +114,3 @@ T = filter.threshold_otsu(greenness)
 # print('The Dice similarity coefficient of the segmentation is: ', DSC)
 #
 #
-# io.show()
