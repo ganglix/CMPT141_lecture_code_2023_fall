@@ -58,37 +58,36 @@ def calculate_r_squared(y_data, y_predicted_data):
     return r_squared
 
 
-# # machine learning to fit the data
-"""
-ChatGPT prompt:
-fit the data (similar to sin(x)) using an artificial neural network with scikit-learn module. 
-use all data for fit/train the model, no test
-"""
-
-from sklearn.neural_network import MLPRegressor
-
-# Generate the data points
-x_data = x_data.reshape(-1, 1)
-y_data = y_data.reshape(-1, 1)
-
-# Define the neural network model
-model = MLPRegressor(hidden_layer_sizes=(5, 5), activation='tanh', solver='lbfgs')
-
-# Train the model on the data
-model.fit(x_data, y_data)
-
-# Generate the fitted curve
-y_fit = model.predict(x_data)
-
-
-# # Plot the data and the fitted curve
-plt.plot(x_data, y_data, 'o', label='data')
-# plt.plot(x_data, function_fit(x_data, y_data, noisy_func), '-', label='function ift')
-plt.plot(x_data, y_fit, '-', label='ML fit')
-
-# print(calculate_r_squared(y_data, y_fit))
-plt.legend()
-plt.show()
+# # # machine learning to fit the data
+# """
+# ChatGPT prompt:
+# fit the data (similar to sin(x)) using an artificial neural network with scikit-learn module.
+# use all data for fit/train the model, no test
+# """
+#
+# from sklearn.neural_network import MLPRegressor
+#
+# # Generate the data points
+# x_data = x_data.reshape(-1, 1)
+# y_data = y_data.reshape(-1, 1)
+#
+# # Define the neural network model
+# model = MLPRegressor(hidden_layer_sizes=(5, 5), activation='tanh', solver='lbfgs')
+#
+# # Train the model on the data
+# model.fit(x_data, y_data)
+#
+# # Generate the fitted curve
+# y_fit = model.predict(x_data)
+#
+#
+# # # Plot the data and the fitted curve
+# plt.plot(x_data, y_data, 'o', label='data')
+# # plt.plot(x_data, function_fit(x_data, y_data, noisy_func), '-', label='function ift')
+# plt.plot(x_data, y_fit, '-', label='ML fit')
+#
+# plt.legend()
+# plt.show()
 
 
 
