@@ -16,10 +16,11 @@ def true_func(x):
 
 # Generate the data points with added noise
 x_data = np.linspace(0, 3, 100)
+np.random.seed(0)
 y_data = true_func(x_data) + np.random.normal(scale=0.1, size=100)
 
-plt.plot(x_data, y_data, '.')
-plt.show()
+# plt.plot(x_data, y_data, '.')
+# plt.show()
 
 
 # Define the function
