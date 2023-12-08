@@ -19,16 +19,17 @@ red = leaf_image_normalized[:, :, 0]
 green = leaf_image_normalized[:, :, 1]
 blue = leaf_image_normalized[:, :, 2]
 
+
 # 3: compute the greenness of each pixel
 greenness = np.zeros([height, width], dtype=float)
 
 # 3a: Loop-based solution to compute greenness
-for r in range(0, height):
-    for c in range(0, width):
-        if red[r, c] + green[r, c] + blue[r, c] != 0:
-            greenness[r, c] = green[r, c] / (red[r, c] + green[r, c] + blue[r, c])
-        else:
-            greenness[r, c] = 0
+# for r in range(0, height):
+#     for c in range(0, width):
+#         if red[r, c] + green[r, c] + blue[r, c] != 0:
+#             greenness[r, c] = green[r, c] / (red[r, c] + green[r, c] + blue[r, c])
+#         else:
+#             greenness[r, c] = 0
 
 # 3b: Loopless solution to compute greenness
 
@@ -36,7 +37,10 @@ for r in range(0, height):
 # greenness = green / (red + green + blue)
 
 #  working loopless solution ?
+total = (red + green + blue)
 
+greenness[total > 0] = green[total > 0] / total[total > 0]
+# greenness[total == 0] = 0
 
 # 4. Plot histogram of greenness
 # F = plt.figure()
@@ -53,11 +57,12 @@ for r in range(0, height):
 
 # 5. Obtain a good threshold of "greennness".
 # Pixels with greenness higher than T are probably part of a leaf.
-# T = filter.threshold_otsu(greenness)
-
+T = filter.threshold_otsu(greenness)
+# T = 0.4
+print(T)
 
 # 6: Segment the image using the greenness threshold.
-# segmentation = np.zeros([height, width], dtype=bool)
+segmentation = np.zeros([height, width], dtype=bool)
 
 # 6a: Loop-based solution
 # for r in range(0, height):
@@ -66,38 +71,38 @@ for r in range(0, height):
 #             segmentation[r, c] = True
 
 # 6b: Loopless soloution
-# segmentation = greenness > T
+segmentation = greenness > T
 
 # fill holes using a library function
-# segmentation = binary_fill_holes(segmentation)
+segmentation = binary_fill_holes(segmentation)
 
 # # 7: draw the segmentation on the original image
-# # find the boundary of leaf
-# segmentation_boundaries = np.zeros_like(segmentation).astype(bool)
-# for i in range(1, segmentation_boundaries.shape[0]-1):
-#     for j in range(1, segmentation_boundaries.shape[1]-1):
-#         if (segmentation[i, j] and  # leaf True, 8 neighbours are not all leaf
-#                 not (segmentation[i - 1, j]
-#                      and segmentation[i + 1, j]
-#                      and segmentation[i, j - 1]
-#                      and segmentation[i, j - 1]
-#                      and segmentation[i + 1, j + 1]
-#                      and segmentation[i - 1, j - 1]
-#                      and segmentation[i + 1, j - 1]
-#                      and segmentation[i - 1, j + 1])):
-#             segmentation_boundaries[i, j] = True
+# find the boundary of leaf
+segmentation_boundaries = np.zeros_like(segmentation).astype(bool)
+for i in range(1, segmentation_boundaries.shape[0]-1):
+    for j in range(1, segmentation_boundaries.shape[1]-1):
+        if (segmentation[i, j] and  # leaf True, 8 neighbours are not all leaf
+                not (segmentation[i - 1, j]
+                     and segmentation[i + 1, j]
+                     and segmentation[i, j - 1]
+                     and segmentation[i, j - 1]
+                     and segmentation[i + 1, j + 1]
+                     and segmentation[i - 1, j - 1]
+                     and segmentation[i + 1, j - 1]
+                     and segmentation[i - 1, j + 1])):
+            segmentation_boundaries[i, j] = True
 
 
 # # use the module function seg:
 # segmentation_boundaries = seg.find_boundaries(segmentation)
 #
-# red[segmentation_boundaries] = 1.0
-# green[segmentation_boundaries] = 0.0
-# blue[segmentation_boundaries] = 0.0
-# result = np.dstack([red, green, blue])  # stack three channels together to form a new 3-D array
-# segfig = plt.figure()
-# io.imshow(result)
-# io.show()
+red[segmentation_boundaries] = 1.0
+green[segmentation_boundaries] = 0.0
+blue[segmentation_boundaries] = 0.0
+result = np.dstack([red, green, blue])  # stack three channels together to form a new 3-D array
+segfig = plt.figure()
+io.imshow(result)
+io.show()
 
 
 # 8: Measure how close the segmentation is to the right answer
